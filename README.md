@@ -17,6 +17,11 @@ in merge sort, I want you to split into *three* sub-arrays at each divide step.
 Hint: Like in the implementation of merge sort, you may need a helper function
 that does the actual recursion.
 
+**Plagiarism message**
+
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+
+
 ## Runtime Analysis
 
 What is the runtime of the algorithm that you implemented? Provide a recurrence
