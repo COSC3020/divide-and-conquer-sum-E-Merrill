@@ -37,6 +37,11 @@ This is the recurrence relation, and from there we can substitute it into itself
 $T(n) = 3T(\frac{n}{3})$  
 $T(n) = 3(3(T(\frac{n}{9}))$  
 $T(n) = 9T(\frac{n}{9})$  
-$T(n) = 27T(n/27)$  
+$T(n) = 27T(\frac{n}{27})$  
 ...  
 $T(n) = (3)^i T(\frac{n}{(3)^i})$  
+Letting $i = log_3 n$ :  
+$T(n) = (3)^(log_3 n) T(\frac{n}{(3)^(log_3 n)}$  
+$T(n) = n T(\frac{n}{n})$  
+$T(n) = n T(1)$  
+$T(n) = n$  
