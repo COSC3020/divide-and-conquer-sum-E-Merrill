@@ -40,8 +40,19 @@ $T(n) = 9T(\frac{n}{9})$
 $T(n) = 27T(\frac{n}{27})$  
 ...  
 $T(n) = 3^i T(\frac{n}{3^i})$  
+
 Letting $i = log_3 n$ :  
+
 $T(n) = 3^{log_3 n}  T(\frac{n}{3^{log_3 n}})$  
 $T(n) = n T(\frac{n}{n})$  
 $T(n) = n T(1)$  
 $T(n) = n$  
+
+This shows that the divide-and-conquer sum I implemented has a runtime analysis/asymptotic complexity of n, or linear complexity.  
+The mathematicl analysis is shown, but I also concluded this by timing the function myself using the 
+```
+performance.now()
+```
+function within Javascript.
+When entering larger numbers, the timing of the function would increase by the same amount as the input size.  
+That is to say, if I doubled the input, the timing would double; if I tripled the input, the timing would triple; if I increased the input by a power of 10, the timing would do the same. 
