@@ -41,7 +41,7 @@ $T(n) = 27T(\frac{n}{27})$
 ...  
 $T(n) = 3^i T(\frac{n}{3^i})$  
 Letting $i = log_3 n$ :  
-$T(n) = 3^log_3 n T(\frac{n}{3^log_3 n}$  
+$T(n) = 3^{log_3 n}  T(\frac{n}{3^{log_3 n}})$  
 $T(n) = n T(\frac{n}{n})$  
 $T(n) = n T(1)$  
 $T(n) = n$  
