@@ -34,9 +34,9 @@ most important part. Add your answer to this markdown file.
 The base condition for the implemented algorithm is $T(1)$ when $n\leq1$  
 In every other case, $T(n) = 3T(n/3)$  
 This is the recurrence relation, and from there we can substitute it into itself to solve for a meaningful answer.  
-$T(n) = 3T(n/3)$  
-$T(n) = 3(3(T(n/9))$  
-$T(n) = 9T(\frac{n}{9})$
+$T(n) = 3T(\frac{n}{3})$  
+$T(n) = 3(3(T(\frac{n}{9}))$  
+$T(n) = 9T(\frac{n}{9})$  
 $T(n) = 27T(n/27)$  
 ...  
-$T(n) = (3)^i T(n/(3)^i)$
+$T(n) = (3)^i T(\frac{n}{(3)^i})$  
