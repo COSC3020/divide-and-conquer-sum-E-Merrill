@@ -29,4 +29,14 @@ relation for $T(n)$ as we did for merge sort (you can ignore constant factors)
 and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
-most important part. Add your answer to this markdown file.
+most important part. Add your answer to this markdown file.  
+
+The base condition for the implemented algorithm is $T(1)$ when $n\leq1$  
+In every other case, $T(n) = 3T(n/3)$  
+This is the recurrence relation, and from there we can substitute it into itself to solve for a meaningful answer.  
+$T(n) = 3T(n/3)$  
+$T(n) = 3(3(T(n/9))$  
+$T(n) = 9T(n/9)$
+$T(n) = 27T(n/27)$  
+...  
+$T(n) = (3)^i T(n/(3)^i)$
