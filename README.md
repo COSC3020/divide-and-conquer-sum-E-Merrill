@@ -48,7 +48,8 @@ $T(n) = n T(\frac{n}{n})+2log_3n$
 $T(n) = n T(1)+2log_3n$  
 $T(n) = n+2log_3n$  
 $2log_3n$ grows slower than $n$, so the final asymptotic complexity ends up being  
-$T(n) = n$
+$T(n) = n$  
+This means that $T(n) \in \theta (n)$  
 
 This shows that the divide-and-conquer sum I implemented has a runtime analysis/asymptotic complexity of n, or linear complexity.  
 The mathematicl analysis is shown, but I also concluded this by timing the function myself using the 
