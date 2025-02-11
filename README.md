@@ -32,21 +32,23 @@ Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.  
 
 The base condition for the implemented algorithm is $T(1)$ when $n\leq1$  
-In every other case, $T(n) = 3T(n/3)$  
+In every other case, $T(n) = 3T(n/3) +2$  with the +2 accounting for adding the partial sums.  
 This is the recurrence relation, and from there we can substitute it into itself to solve for a meaningful answer.  
-$T(n) = 3T(\frac{n}{3})$  
-$T(n) = 3(3(T(\frac{n}{9}))$  
-$T(n) = 9T(\frac{n}{9})$  
-$T(n) = 27T(\frac{n}{27})$  
+$T(n) = 3T(\frac{n}{3})+2$  
+$T(n) = 3(3(T(\frac{n}{9})+\frac{2}{3})+2$  
+$T(n) = 9T(\frac{n}{9})+4$  
+$T(n) = 27T(\frac{n}{27})+6$  
 ...  
-$T(n) = 3^i T(\frac{n}{3^i})$  
+$T(n) = 3^i T(\frac{n}{3^i})+2i$  
 
 Letting $i = log_3 n$ :  
 
-$T(n) = 3^{log_3 n}  T(\frac{n}{3^{log_3 n}})$  
-$T(n) = n T(\frac{n}{n})$  
-$T(n) = n T(1)$  
-$T(n) = n$  
+$T(n) = 3^{log_3 n}  T(\frac{n}{3^{log_3 n}})+2log_3n$  
+$T(n) = n T(\frac{n}{n})+2log_3n$  
+$T(n) = n T(1)+2log_3n$  
+$T(n) = n+2log_3n$  
+$2log_3n$ grows slower than $n$, so the final asymptotic complexity ends up being  
+$T(n) = n$
 
 This shows that the divide-and-conquer sum I implemented has a runtime analysis/asymptotic complexity of n, or linear complexity.  
 The mathematicl analysis is shown, but I also concluded this by timing the function myself using the 
